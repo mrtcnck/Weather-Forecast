@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="./assets/js/script.js"></script>
+    <title>Canlı Hava Durumu</title>
+  </head>
+  <body id="main">
+    <nav class="bg-light">
+      <div
+        class="container d-flex justify-content-center align-items-center h-100"
+      >
+        <img src="./assets/img/weblogo.png" alt="" />
+      </div>
+    </nav>
+    <main>
+      <!-- ana div -->
+      <div
+        class="main d-flex justify-content-center align-items-center gap-3 pt-2"
+      >
+        <!-- şuanki hava durum divi -->
+        <div
+          class="weatherInfo2 d-flex flex-column align-items-center justify-content-between bg-light rounded-3"
+        >
+          <h5 class="h5 my-3">Şu Anki Hava Durumu</h5>
+          <!-- konum bilgisi -->
+          <div class="location d-flex flex-column w-100 rounded-3">
+            <h1 class="display-6 py-2 px-3">
+              Konum<i class="fa-solid fa-location-dot px-3"></i>
+            </h1>
+            <p class="py-1 px-3" id="location">
+              Lütfen tarayıcınızdan konum hizmetlerine izin verin.
+            </p>
+          </div>
+          <!-- sembolik ve sözel hava durumu -->
+          <div
+            class="currentWeather rounded-3 d-flex flex-column w-50 justify-content-center align-items-center gap-3"
+          >
+            <img src="" alt="" id="currentWeatherImg" />
+            <p id="currentWeather">Ulaşılamıyor.</p>
+          </div>
+          <!-- hava durum detayları -->
+          <div
+            class="currentWeatherDetails d-flex flex-column rounded-3 justify-content-center align-items-center w-50"
+          >
+            <div class="d-flex">
+              <p>Sıcaklık:</p>
+              <p id="currentWeatherTemp">-</p>
+              <p>°C</p>
+            </div>
+            <div class="d-flex">
+              <p>Hissedilen Sıcaklık:</p>
+              <p id="currentWeatherFeelsLike">-</p>
+              <p>°C</p>
+            </div>
+            <div class="d-flex">
+              <p>Nem Oranı:</p>
+              <p id="currentWeatherHumidity">-</p>
+              <p>%</p>
+            </div>
+            <div class="d-flex">
+              <p>Rüzgar Hızı:</p>
+              <p id="currentWeatherWindSpeed">-</p>
+              <p>m/s</p>
+            </div>
+          </div>
+          <div class="dateNow d-flex gap-3">
+            <h1 class="h5" id="dateNow"></h1>
+            <h1 class="h5">-</h1>
+            <h1 class="h5" id="DMY"></h1>
+          </div>
+        </div>
+        <!-- 5 günlük hava tahmini -->
+        <div class="weatherInfo d-flex flex-column bg-light rounded-3">
+          <div class="infoDetailCard d-flex flex-column">
+            <h5 class="h5 my-3 sticky-top bg-light p-3">
+              5 Günlük Hava Durumu Tahmini
+            </h5>
+            <div
+              class="weeklyWeather mt-3 px-3 w-100 d-flex flex-wrap justify-content-center align-items-center gap-3"
+            >
+              <!-- Gün 1 -->
+              <div id="weeklyWeatherCard0" class="weeklyWeatherCard0 rounded-3">
+                <p id="day0">-</p>
+                <div class="d-flex">
+                  <div
+                    class="w-50 d-flex flex-column justify-content-center align-items-center"
+                  >
+                    <img id="day0Img" src="" alt="" />
+                    <p id="day0Status">-</p>
+                  </div>
+                  <div class="w-50">
+                    <p>Ortalama Sıcaklık</p>
+                    <div class="d-flex justify-content-center">
+                      <p id="day0Temp">-</p>
+                      <p>°C</p>
+                    </div>
+                    <p>Nem Oranı</p>
+                    <div class="d-flex justify-content-center">
+                      <p id="day0Humidity">-</p>
+                      <p>%</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Gün 2 -->
+              <div id="weeklyWeatherCard1" class="weeklyWeatherCard1 rounded-3">
+                <p id="day1">-</p>
+                <div class="d-flex">
+                  <div
+                    class="w-50 d-flex flex-column justify-content-center align-items-center"
+                  >
+                    <img id="day1Img" src="" alt="" />
+                    <p id="day1Status">-</p>
+                  </div>
+                  <div class="w-50">
+                    <p>Ortalama Sıcaklık</p>
+                    <div class="d-flex justify-content-center">
+                      <p id="day1Temp">-</p>
+                      <p>°C</p>
+                    </div>
+                    <p>Nem Oranı</p>
+                    <div class="d-flex justify-content-center">
+                      <p id="day1Humidity">-</p>
+                      <p>%</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Gün 3 -->
+              <div id="weeklyWeatherCard2" class="weeklyWeatherCard2 rounded-3">
+                <p id="day2">-</p>
+                <div class="d-flex">
+                  <div
+                    class="w-50 d-flex flex-column justify-content-center align-items-center"
+                  >
+                    <img id="day2Img" src="" alt="" />
+                    <p id="day2Status">-</p>
+                  </div>
+                  <div class="w-50">
+                    <p>Ortalama Sıcaklık</p>
+                    <div class="d-flex justify-content-center">
+                      <p id="day2Temp">-</p>
+                      <p>°C</p>
+                    </div>
+                    <p>Nem Oranı</p>
+                    <div class="d-flex justify-content-center">
+                      <p id="day2Humidity">-</p>
+                      <p>%</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Gün 4 -->
+              <div id="weeklyWeatherCard3" class="weeklyWeatherCard3 rounded-3">
+                <p id="day3">-</p>
+                <div class="d-flex">
+                  <div
+                    class="w-50 d-flex flex-column justify-content-center align-items-center"
+                  >
+                    <img id="day3Img" src="" alt="" />
+                    <p id="day3Status">-</p>
+                  </div>
+                  <div class="w-50">
+                    <p>Ortalama Sıcaklık</p>
+                    <div class="d-flex justify-content-center">
+                      <p id="day3Temp">-</p>
+                      <p>°C</p>
+                    </div>
+                    <p>Nem Oranı</p>
+                    <div class="d-flex justify-content-center">
+                      <p id="day3Humidity">-</p>
+                      <p>%</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- Gün 5 -->
+              <div id="weeklyWeatherCard4" class="weeklyWeatherCard4 rounded-3">
+                <p id="day4">-</p>
+                <div class="d-flex">
+                  <div
+                    class="w-50 d-flex flex-column justify-content-center align-items-center"
+                  >
+                    <img id="day4Img" src="" alt="" />
+                    <p id="day4Status">-</p>
+                  </div>
+                  <div class="w-50">
+                    <p>Ortalama Sıcaklık</p>
+                    <div class="d-flex justify-content-center">
+                      <p id="day4Temp">-</p>
+                      <p>°C</p>
+                    </div>
+                    <p>Nem Oranı</p>
+                    <div class="d-flex justify-content-center">
+                      <p id="day4Humidity">-</p>
+                      <p>%</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

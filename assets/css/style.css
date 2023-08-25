@@ -1,0 +1,214 @@
+body {
+  background-color: lightblue;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+nav {
+  height: 8vh !important;
+}
+
+nav ul {
+  margin-top: 7px !important;
+  gap: 30px;
+}
+
+nav ul li,
+nav ul li a {
+  list-style: none;
+  text-decoration: none;
+  color: black;
+}
+
+nav img,
+.weeklyWeatherCard0 img,
+.weeklyWeatherCard1 img,
+.weeklyWeatherCard2 img,
+.weeklyWeatherCard3 img,
+.weeklyWeatherCard4 img {
+  width: 15%;
+  object-fit: contain;
+}
+
+.currentWeather img {
+  width: 60%;
+}
+
+main {
+  height: 92vh !important;
+}
+
+.location {
+  font-size: 30px;
+  font-weight: 700;
+  text-align: center;
+}
+
+.weatherInfo {
+  width: 50%;
+  overflow-y: scroll;
+  font-size: 20px;
+  text-align: center;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.line {
+  border-bottom: 1px solid black;
+}
+
+.infoDetailCard,
+.weatherInfo2 {
+  height: 90vh;
+}
+
+.weatherInfo2 {
+  width: 25%;
+  box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px,
+    rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;
+}
+
+.weatherInfo2 p {
+  text-align: center;
+  font-size: 2vh;
+}
+
+.currentWeather p {
+  font-size: 4vh;
+  margin-bottom: 0 !important;
+}
+
+.currentWeatherDetails p {
+  font-size: 2vh;
+}
+
+.weeklyWeatherCard0,
+.weeklyWeatherCard1,
+.weeklyWeatherCard2,
+.weeklyWeatherCard3,
+.weeklyWeatherCard4 {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 25%;
+  width: 100%;
+  background-color: white;
+  box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset,
+    rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+}
+
+.weeklyWeatherCard0 p,
+.weeklyWeatherCard1 p,
+.weeklyWeatherCard2 p,
+.weeklyWeatherCard3 p,
+.weeklyWeatherCard4 p {
+  text-shadow: 3px 0px 7px rgba(0, 0, 0, 0.8), -3px 0px 7px rgba(0, 0, 0, 0.8),
+    0px 4px 7px rgba(0, 0, 0, 0.8);
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media screen and (min-width: 767px) and (max-width: 1023px) {
+  .dateNow {
+    display: flex;
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .weatherInfo2,
+  .weatherInfo {
+    width: 45% !important;
+  }
+
+  .weatherInfo2 img {
+    width: 30%;
+  }
+
+  nav img {
+    width: 25%;
+  }
+
+  .weeklyWeatherCard0,
+  .weeklyWeatherCard1,
+  .weeklyWeatherCard2,
+  .weeklyWeatherCard3,
+  .weeklyWeatherCard4 {
+    height: 30%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .weeklyWeatherCard0 img,
+  .weeklyWeatherCard1 img,
+  .weeklyWeatherCard2 img,
+  .weeklyWeatherCard3 img,
+  .weeklyWeatherCard4 img {
+    width: 25%;
+    object-fit: contain;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .dateNow {
+    display: flex;
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .weatherInfo2,
+  .weatherInfo {
+    width: 80% !important;
+  }
+
+  .weatherInfo2 img {
+    width: 40%;
+  }
+
+  .main {
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav img {
+    width: 45%;
+  }
+
+  .weeklyWeatherCard0,
+  .weeklyWeatherCard1,
+  .weeklyWeatherCard2,
+  .weeklyWeatherCard3,
+  .weeklyWeatherCard4 {
+    height: 30%;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .weeklyWeatherCard0 img,
+  .weeklyWeatherCard1 img,
+  .weeklyWeatherCard2 img,
+  .weeklyWeatherCard3 img,
+  .weeklyWeatherCard4 img {
+    width: 25%;
+    object-fit: contain;
+  }
+}
