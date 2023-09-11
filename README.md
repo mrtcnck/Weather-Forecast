@@ -1,10 +1,6 @@
 # Weather-Forecast
  
-In this project, I used HTML, CSS, JavaScript. 
-For weather information, the user is first asked for location information. 
-After the user allows the location, the weather forecast for the next 5 days is listed. 
-The weather information comes via API and I do API Fetch with JavaScript. 
-I send the incoming data into HTML with JavaScript, not manually.
+Projede HTML, CSS, JavaScript kullandım. İlk aşamada; GeoLocation kullanarak hava durumu bilgisi için kullanıcıdan konum izni istedim. İkinci versiyonda; kullanıcı lokasyona izin verdikten sonra önümüzdeki 5 gün için hava durumu listeledim. Hava durumu bilgisini API üzerinden getirdim ve JS ile API Fetch işleminden geçirdim. JS DOM yapısı ile HTML içerisine aktardım. Üçüncü aşamada; front-end kısmını tasarladım ve proje içerisine yerleştirdim.
 
-<h2 align="left">How to use?</h2>
-Open and allow the location.
+<h2 align="left">Nasıl Kullanılır?</h2>
+Siteye giriş yaptığınızda sadece konuma izin vermeniz yeterli.
